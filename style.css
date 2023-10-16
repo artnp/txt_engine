@@ -1,11 +1,8 @@
 body {
     background-color: #686262; /* Dark background color */
     color: white; /* White text */
-
-
-
-    height: 50vh;
-    
+    overflow-x: hidden;
+    height: 50vh; 
 }
 
 .container {
