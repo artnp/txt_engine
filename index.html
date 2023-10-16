@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>txt_engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"><img src="book.png" width="30%">
+        <input type="text" id="searchInput" class="searchInput" placeholder="ขุมพลังข้อมูล...">
+        <div id="resultContainer" class="resultContainer">
+
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script>
+      function searchAndHighlight() {
+  const searchInput = document.getElementById('searchInput').value.toLowerCase();
+  const resultContainer = document.getElementById('resultContainer');
+  resultContainer.innerHTML = '';
+
+  textData.forEach((text, index) => {
+      if (text.toLowerCase().includes(searchInput)) {
+          const highlightedText = text.replace(
+              new RegExp(searchInput, 'gi'),
+              (match) => `<mark>${match}</mark>`
+          );
+
+          const paragraph = document.createElement('p');
+          paragraph.innerHTML = highlightedText;
+          resultContainer.appendChild(paragraph);
+      }
+  });
+}
+
+document.getElementById('searchInput').addEventListener('input', searchAndHighlight);
+
+    </script>
+</body>
+</html>

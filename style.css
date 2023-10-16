@@ -1,0 +1,46 @@
+body {
+    background-color: #686262; /* Dark background color */
+    color: white; /* White text */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.container {
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+.searchInput {
+    width: 92%;
+    padding: 15px;
+    font-size: 1.5em;
+
+    border-radius: 5px;
+
+    background-color: #202122; /* Darker background color for input */
+    color: white; /* White text for input */
+}
+
+.searchInput::placeholder {
+    color: rgb(83, 83, 83); /* White placeholder text */
+}
+
+.resultContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.resultContainer p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    border: 1px solid #34495e; /* Darker border */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.resultContainer mark {
+    background-color: yellow;
+    font-weight: bold;
+}
