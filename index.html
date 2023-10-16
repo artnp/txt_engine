@@ -5,14 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>txt_engine</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+	          .black-box {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 99%;
+    overflow: hidden;
+    position: relative;
+  }
+  .flashing-bar {
+    width: 10px;
+    height: 15px;
+    background-color: white;
+	position: absolute;
+    animation: flashing 1.5s infinite;
+  }
+
+  @keyframes flashing {
+    0%, 49% {
+      opacity: 0;
+    }
+    50%, 100% {
+      opacity: 1;
+    }
+  }
+
+    </style>
 </head>
+
 <body>
+    <div class="black-box"><center>
+        <div class="flashing-bar"></div><a href="javascript:history.back()" style="background-color:white;">🡨Go Back</a> &nbsp;&nbsp;<i>พิมพ์เพื่อค้นหาข้อมูลในคลังห้องสมุด</i>
+        </center></div><br><br>
+        <center>
     <div class="container"><img src="book.png" width="30%">
         <input type="text" id="searchInput" class="searchInput" placeholder="ขุมพลังข้อมูล...">
         <div id="resultContainer" class="resultContainer">
 
         </div>
-    </div>
+    </div></center>
     <script src="data.js"></script>
     <script>
       function searchAndHighlight() {

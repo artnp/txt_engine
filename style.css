@@ -1,14 +1,16 @@
 body {
     background-color: #686262; /* Dark background color */
     color: white; /* White text */
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+
     height: 50vh;
+    
 }
 
 .container {
+    padding-top: 50%;
+  padding-bottom: 50%;
     max-width: 400px;
     text-align: center;
     padding: 20px;
@@ -18,9 +20,7 @@ body {
     width: 92%;
     padding: 15px;
     font-size: 1.5em;
-
     border-radius: 5px;
-
     background-color: #202122; /* Darker background color for input */
     color: white; /* White text for input */
 }
